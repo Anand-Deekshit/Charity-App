@@ -1,10 +1,10 @@
 
           <div class="form-group">
-            <label >Survey name</label>
+            <label class="font600">Survey name</label>
             <input type="text" class="form-control" placeholder="Enter the name of the survey" [(ngModel)]="newSurvey.surveyName" name="{{newSurvey.surveyName}}">
           </div>
           <div class="form-group">
-            <label >What is this survey about ?</label>
+            <label class="font600">What is this survey about ?</label>
             <textarea class="form-control" placeholder="Description of survey" [(ngModel)]="newSurvey.surveyDesc" name="{{newSurvey.surveyDesc}}"></textarea>
           </div>
           <hr>
@@ -31,9 +31,10 @@
                             </select>
                         </td>
                         <td style="width: 20%">
-                            <button class="btn btn-default"  type="button" (click)="deleteQuestion(i)"><span class="glyphicon glyphicon-trash"></span></button>
+                            <button class="btn btn-default"  type="button" (click)="deleteQuestion(i)">D</button>
                             
-                            <button *ngIf="i == (questionsArray.length-1)" style="margin-left: 10px" class="btn btn-default" type="button" (click)="addQuestion()">Add</button>
+                            <button *ngIf="i == (questionsArray.length-1)" style="margin-left: 10px" class="btn btn-default" type="button" (click)="addQuestion()">A</button>
+                            <button *ngIf="(field.questiontype==2 || field.questiontype==3) && field.questionOptions.length>0 " style="margin-left: 10px" class="btn btn-default" (click)="reviewOptions(field)" type="button">SO</button>
                         </td>
                     </tr>
                     
@@ -46,7 +47,7 @@
 
             <jw-modal id="custom-modal-2" style="display: none">
                     <div class="form-group">
-                        <label >Question</label>
+                        <label >{{question.question}}</label>
                       </div>
                       <hr>
                       <table class="table table-striped table-bordered questions-table">
@@ -77,6 +78,7 @@
                 </jw-modal>
 
 
+                
 
             
 

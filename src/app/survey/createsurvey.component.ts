@@ -68,8 +68,17 @@ deleteOption(index) {
 openModal(question) {
   this.question = question;
   if(this.newQuestion.questiontype == 2 || this.newQuestion.questiontype == 3){
+    if(this.optionsArray.length == 0){
+      this.initializeOptions();
+    }
     this.modalService.modalOpen();
   }
+}
+
+reviewOptions(question){
+  this.question = question;
+  this.optionsArray = this.question.questionOptions;
+  this.modalService.modalOpen();
 }
 
 closeModal() {
@@ -78,7 +87,7 @@ closeModal() {
 }
 
 submitOptions(){
-  
+  this.question.questionOptions = [];
   for(var i = 0; i < this.optionsArray.length; i++){
     this.question.questionOptions.push(this.optionsArray[i]);
   }

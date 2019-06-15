@@ -1,31 +1,49 @@
 <div class='previewheadercontainer'>
     <div class='previewsurveyheader'>
-        <h4>This is a test survey</h4>
+        <h4>{{currentSurvey.surveyName}}</h4>
     </div>
 </div>
-<p>This is a big test description This is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test survey</p>
+<p>{{currentSurvey.surveyDesc}}.</p>
 
 <div *ngFor="let question of currentSurvey.surveyQuestions">
     <hr>
     <p>{{question.question}}</p>
     <div [ngSwitch]="question.questiontype">
-            <div *ngSwitchCase="1">
-                <input type="radio"/>Yes<br>
-                <input type="radio"/>No
+        <div *ngSwitchCase="1">
+            <div>
+                <label>
+                  <input type="radio" class="option-input radio" name="example"  />
+                  <label class="option-text">Yes</label>
+                </label>
+                <br>
+                <label>
+                  <input type="radio" class="option-input radio" name="example" />
+                  <label class="option-text">No</label>
+                </label>
             </div>
-            <div *ngSwitchCase="2">
-                <div *ngFor="let option of question.questionOptions">
-                    <input type="radio"/>{{option.optionvalue}}<br>
-                </div>
+        </div>
+        <div *ngSwitchCase="2">
+            <div *ngFor="let option of question.questionOptions">
+                <label>
+                    <input type="radio" class="option-input radio" name="example"  />
+                    <label class="option-text">{{option.optionvalue}}</label>
+                  </label>
             </div>
-            <div *ngSwitchCase="3">
-                <div  *ngFor="let option of question.questionOptions">
-                    <input type="checkbox"/>{{option.optionvalue}}<br>
-                </div>
+        </div>
+        <div *ngSwitchCase="3">
+            <div *ngFor="let option of question.questionOptions">
+                <div>
+                    <label>
+                      <input type="checkbox" class="option-input checkbox"  />
+                      <label class="option-text">{{option.optionvalue}}</label>
+                    </label>
+                  
             </div>
-            <div *ngSwitchCase="4">
-                <textarea></textarea>
-            </div>
+        </div>
+        </div>
+        <div *ngSwitchCase="4" class="form-group">
+            <textarea class="form-control"></textarea>
+        </div>
     </div>
-   
+
 </div>

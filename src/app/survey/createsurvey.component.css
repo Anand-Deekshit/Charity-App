@@ -4,3 +4,9 @@ table.questions-table th{
     background-color: #404040;
     color: white;
 }
+
+.submitSurveyButton{
+    background-color: #DE6262;
+    color: white;
+    font-weight: 600;
+}
