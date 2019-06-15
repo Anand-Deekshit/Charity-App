@@ -1,0 +1,31 @@
+<div class='previewheadercontainer'>
+    <div class='previewsurveyheader'>
+        <h4>This is a test survey</h4>
+    </div>
+</div>
+<p>This is a big test description This is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test surveyThis is a test survey</p>
+
+<div *ngFor="let question of currentSurvey.surveyQuestions">
+    <hr>
+    <p>{{question.question}}</p>
+    <div [ngSwitch]="question.questiontype">
+            <div *ngSwitchCase="1">
+                <input type="radio"/>Yes<br>
+                <input type="radio"/>No
+            </div>
+            <div *ngSwitchCase="2">
+                <div *ngFor="let option of question.questionOptions">
+                    <input type="radio"/>{{option.optionvalue}}<br>
+                </div>
+            </div>
+            <div *ngSwitchCase="3">
+                <div  *ngFor="let option of question.questionOptions">
+                    <input type="checkbox"/>{{option.optionvalue}}<br>
+                </div>
+            </div>
+            <div *ngSwitchCase="4">
+                <textarea></textarea>
+            </div>
+    </div>
+   
+</div>

@@ -1,0 +1,9 @@
+.home-navbar{
+    background-color: #DE6262;
+}
+
+.main-navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 1000000;
+}

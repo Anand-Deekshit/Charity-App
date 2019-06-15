@@ -1,0 +1,23 @@
+[
+    {
+    "firstName" : "Anand",
+    "lastName" : "Deekshit",
+    "email" : "deek@gmail.com",
+    "gender" : "Male",
+    "password" : "Anand123"
+    },
+    {
+    "firstName" : "Hemanth",
+    "lastName" : "Kashyap",
+    "email" : "hem@gmail.com",
+    "gender" : "Male",
+    "password" : "Hemanth123"
+    },
+    {
+    "firstName" : "Yashwanth",
+    "lastName" : "Kashyap",
+    "email" : "yash@gmail.com",
+    "gender" : "Female",
+    "password" : "Yash123"
+    }
+]

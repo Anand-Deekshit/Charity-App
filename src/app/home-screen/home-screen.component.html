@@ -1,0 +1,26 @@
+<nav class="home-navbar navbar navbar-expand-lg navbar-dark main-navbar">
+  <a class="navbar-brand" href="#">Charity App</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" (click) = "dashboard()">Dashboard <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click) = "spaces()">Spaces</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click) = "groups()">Groups</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click) = "survey()">Survey</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="testclass1">
+  <router-outlet ></router-outlet>
+</div>
