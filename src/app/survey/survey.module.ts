@@ -11,14 +11,18 @@ import { ModalComponent } from './options-modal/options-modal.component';
 import { ModalService } from './options-modal/options-modal.services';
 import { CreateSurveyService } from './createsurvey.service';
 import { PreviewSurveyComponent } from 'src/app/survey/previewsurvey.component';
+//import {MatDatepickerModule, MatDatepicker} from '@angular/material/datepicker';
+//import {NgbdDatepickerBasic} from './datepicker/datepicker.component';
+
 
 @NgModule({
-  declarations: [SurveyComponent, CreateSurveyComponent, PreviewSurveyComponent, MyQuestionsComponent, MySurveyComponent, ModalComponent],
+  declarations: [SurveyComponent, CreateSurveyComponent, PreviewSurveyComponent, MyQuestionsComponent, MySurveyComponent, ModalComponent ],
   imports: [
     CommonModule,
     BrowserModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    
   ],
   providers: [
     ModalService,

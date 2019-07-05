@@ -15,6 +15,12 @@ export class PreviewSurveyComponent implements OnInit {
 
   ngOnInit() {
       this.currentSurvey = this.createSurveyService.getCurrentSurvey();
+     
+  }
+
+  saveSurvey(){
+    this.createSurveyService.createSurvey(this.currentSurvey);
+    console.log(this.currentSurvey);
   }
 
 }

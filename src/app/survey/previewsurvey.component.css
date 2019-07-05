@@ -5,6 +5,10 @@
     margin-bottom: 5%;
 }
 
+.previewActions{
+  margin-right: 8px;
+}
+
 .radio, .checkbox{font-family: 'Roboto';}
 
 @keyframes click-wave {

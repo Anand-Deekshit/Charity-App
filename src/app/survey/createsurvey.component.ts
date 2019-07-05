@@ -100,7 +100,6 @@ createSurvey(){
   this.newSurvey.surveyQuestions  = Object.assign([], this.questionsArray);
   this.createSurveyService.setCurrentSurvey(this.newSurvey);
   this.router.navigate(['/homescreen/survey/previewsurvey'])
-  console.log(this.newSurvey);
-  //this.createSurveyService.createSurvey(this.newSurvey);
+  
 }
 }

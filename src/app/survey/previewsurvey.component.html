@@ -7,43 +7,50 @@
 
 <div *ngFor="let question of currentSurvey.surveyQuestions">
     <hr>
-    <p>{{question.question}}</p>
+    <p class="font600">{{question.question}}</p>
     <div [ngSwitch]="question.questiontype">
         <div *ngSwitchCase="1">
             <div>
                 <label>
-                  <input type="radio" class="option-input radio" name="example"  />
-                  <label class="option-text">Yes</label>
+                    <input type="radio" class="option-input radio" name="example" />
+                    <label class="option-text">Yes</label>
                 </label>
                 <br>
                 <label>
-                  <input type="radio" class="option-input radio" name="example" />
-                  <label class="option-text">No</label>
+                    <input type="radio" class="option-input radio" name="example" />
+                    <label class="option-text">No</label>
                 </label>
             </div>
         </div>
         <div *ngSwitchCase="2">
             <div *ngFor="let option of question.questionOptions">
                 <label>
-                    <input type="radio" class="option-input radio" name="example"  />
+                    <input type="radio" class="option-input radio" name="example" />
                     <label class="option-text">{{option.optionvalue}}</label>
-                  </label>
+                </label>
             </div>
         </div>
         <div *ngSwitchCase="3">
             <div *ngFor="let option of question.questionOptions">
                 <div>
                     <label>
-                      <input type="checkbox" class="option-input checkbox"  />
-                      <label class="option-text">{{option.optionvalue}}</label>
+                        <input type="checkbox" class="option-input checkbox" />
+                        <label class="option-text">{{option.optionvalue}}</label>
                     </label>
-                  
+
+                </div>
             </div>
-        </div>
         </div>
         <div *ngSwitchCase="4" class="form-group">
             <textarea class="form-control"></textarea>
         </div>
     </div>
-
+</div>
+<div class="row">
+    <div class="col-lg-4">
+        <input type="button" style="background-color: #E5E5E5; color:black" class="previewActions btn submitSurveyButton" value="Save" (click)="saveSurvey()"
+        />
+        <input type="button" class="previewActions btn submitSurveyButton" value="Send" />
+        <input type="button" style="background-color: #404040" class="previewActions btn submitSurveyButton" value="Cancel" />
+    </div>
 </div>

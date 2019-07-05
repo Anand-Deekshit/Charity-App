@@ -35,6 +35,8 @@ export class LoginComponent implements OnInit {
           alert("User id doesnt exist");
         }
         else if(this.loggedInUser.password == this.userDetails.password ){
+          localStorage.setItem('isLoggedIn', "true");
+          localStorage.setItem('user', JSON.stringify(this.userDetails));
           this.router.navigate(['/homescreen/dashboard']);
         }
         

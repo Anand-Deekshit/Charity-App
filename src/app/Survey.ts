@@ -6,4 +6,5 @@ export class Survey{
     surveyName: String;
     surveyDesc: String;
     surveyQuestions: Array<Question>;
+    startDate: String;
 }
